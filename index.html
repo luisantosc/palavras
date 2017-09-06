@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8"/>
+		<script src="./js/jquery.min.js"></script>
+		</head>
+		<script>
+			$(function(){
+				var tamanho=140;
+				$("body")
+					.append($("<h3/>")
+						.text(tamanho)
+						.addClass("qtde")
+				)
+				
+					$("#texto").keyup(function(){
+						var qtdeCaixa = $("#texto").val().length;
+						if(tamanho-qtdeCaixa>=0){
+						$(".qtde").text(tamanho-qtdeCaixa);
+						$(".qtde").css("color","black"); 
+						}
+						else{
+						$(".qtde").text(tamanho-qtdeCaixa);
+							$(".qtde").css("color","red");  
+							
+						}
+						
+					})
+					var texto = $("#texto").val();
+					$(".button")
+					var palavraArray = texto.split(" ");
+					console.log(palavraArray);
+				
+				
+			
+			});
+		</script>
+	<body>
+	<textarea id="texto"></textarea>
+	</body>
+</html>
