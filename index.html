@@ -6,11 +6,16 @@
 		</head>
 		<script>
 			$(function(){
+				var numeros = 0;
 				var tamanho=140;
 				$("body")
 					.append($("<h3/>")
 						.text(tamanho)
 						.addClass("qtde")
+				)
+				.append($("<h3/>")
+						.text(numeros)
+						.addClass("num")
 				)
 				
 					$("#texto").keyup(function(){
@@ -25,12 +30,15 @@
 							
 						}
 						
-					})
 					var texto = $("#texto").val();
 					$(".button")
 					var palavraArray = texto.split(" ");
 					console.log(palavraArray);
-				
+					numeros = palavraArray.length;
+					$(".num").text(numeros);
+					
+					})
+					
 				
 			
 			});
